@@ -5,7 +5,7 @@
     <script src="https://code.jquery.com/jquery.js"></script>
     <script src="js/javascript.js"></script>
     <script src="https://code.jquery.com/jquery-1.11.2.js"></script>
-
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
     <link type="text/css" rel="stylesheet" href="css/css.css"/>
 </head>
 <body>
@@ -14,10 +14,10 @@
     <div><p>如果大木博士給你選你的第一支神奇寶貝，你會選哪一隻?</p></div>
 
     <form>
-        <input type=radio value="對應值一" name="選項名稱"> 皮卡丘
-        <input type=radio value="對應值二" name="選項名稱"> 小火龍
-        <input type=radio value="對應值三" name="選項名稱"> 傑尼龜
-        <input type=radio value="對應值三" name="選項名稱"> 妙哇種子
+        <input class="test" type=radio value="0" name="選項名稱"> 皮卡丘
+        <input class="test" type=radio value="1" name="選項名稱"> 小火龍
+        <input class="test" type=radio value="2" name="選項名稱"> 傑尼龜
+        <input class="test" type=radio value="3" name="選項名稱"> 妙哇種子
     </form>
 
     <form>
@@ -41,27 +41,7 @@
             xfbml: true,
             version: 'v2.5'
         });
-        FB.ui(
-                {
-                    method: 'share',
-                    name: 'Facebook Dialogs',
-                    link: 'http://tw.yahoo.com',
-                    href: 'https://developers.facebook.com/docs/',
-                    picture: 'http://www.vikilife.com/wp-content/uploads/2013/03/03194-15.jpg',
-                    caption: '大木博士',
-                    description: '心理測驗'
 
-                },
-
-                function (response) {
-
-                    if (response && response.post_id) {
-                        alert('Post was published.');
-                    } else {
-                        alert('Post was not published.');
-                    }
-                }
-        );
     };
 
     (function (d, s, id) {
