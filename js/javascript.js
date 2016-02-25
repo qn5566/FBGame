@@ -7,7 +7,7 @@ $(document).ready(function(){
 
     $(".css_btn_class").on("click", function (e) {
         //alert("果然是個聰明人!");
-        var checked =  TestGame($("input.test.checked").val());
+        var checked_ad =  TestGame($("input.test.checked").val());
         //TestGame($("input.test.checked").val());
         //console.log( TestGame($("input.test.checked").val()));
         console.log(checked);
@@ -16,7 +16,7 @@ $(document).ready(function(){
                 method: 'share',
                 name: 'Facebook Dialogs',
                 href: 'http://qn5566.github.io/FBGame/',
-                picture: 'http://attachment.van698.com/forum/201504/04/214651vc11z80jzjcx8xgr.jpg',
+                picture: checked_ad,
                 caption: '大木博士的心理測驗',
                 description: '神奇寶貝決定了你的性格',
                 message: '11111'
