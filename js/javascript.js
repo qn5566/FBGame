@@ -10,7 +10,7 @@ $(document).ready(function(){
         var checked_ad =  TestGame($("input.test.checked").val());
         //TestGame($("input.test.checked").val());
         //console.log( TestGame($("input.test.checked").val()));
-        console.log(checked);
+        //console.log(checked);
         FB.ui(
             {
                 method: 'share',
