@@ -23,7 +23,8 @@ $(document).ready(function(){
             },
 
             function (response) {
-                alert(response);
+                console.log(response);
+                console.log(response.post_id);
                 //if (response && response.post_id) {
                 //    //alert('順利發佈消息摟~');
                 //} else {
