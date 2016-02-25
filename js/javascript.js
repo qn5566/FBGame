@@ -10,13 +10,13 @@ $(document).ready(function(){
         var checked =  TestGame($("input.test.checked").val());
         //TestGame($("input.test.checked").val());
         //console.log( TestGame($("input.test.checked").val()));
-        //console.log($("input.test.checked").val());
+        console.log(checked);
         FB.ui(
             {
                 method: 'share',
                 name: 'Facebook Dialogs',
                 href: 'http://qn5566.github.io/FBGame/',
-                picture: checked,
+                picture: 'http://attachment.van698.com/forum/201504/04/214651vc11z80jzjcx8xgr.jpg',
                 caption: '大木博士的心理測驗',
                 description: '神奇寶貝決定了你的性格',
                 message: '11111'
