@@ -23,12 +23,12 @@ $(document).ready(function(){
             },
 
             function (response) {
-
-                if (response && response.post_id) {
-                    alert('順利發佈消息摟~');
-                } else {
-                    alert('沒有發送成功!哭哭');
-                }
+                alert(response);
+                //if (response && response.post_id) {
+                //    //alert('順利發佈消息摟~');
+                //} else {
+                //    //alert('沒有發送成功!哭哭');
+                //}
             }
         );
 
