@@ -7,8 +7,9 @@ $(document).ready(function(){
 
     $(".css_btn_class").on("click", function (e) {
         //alert("果然是個聰明人!");
-        var checked ='';
-        TestGame($("input.test.checked").val());
+        var checked =  TestGame($("input.test.checked").val());
+        //TestGame($("input.test.checked").val());
+        //console.log( TestGame($("input.test.checked").val()));
         //console.log($("input.test.checked").val());
         FB.ui(
             {
@@ -37,25 +38,34 @@ $(document).ready(function(){
 })
 
 
- function TestGame(checked){
-    switch(checked){
-        case 0:
+ function TestGame(chec){
+     var checked ='';
+     console.log(chec);
+     var ma0 = "http://www.vikilife.com/wp-content/uploads/2013/03/03194-15.jpg";
+     var ma1 = "http://d.facdn.net/art/huiro/1326007702.huiro_004.png";
+     var ma2 = "http://attachment.van698.com/forum/201504/04/214651vc11z80jzjcx8xgr.jpg";
+     var ma3 = "http://img.sj33.cn/uploads/allimg/201207/20120724102115753.jpg";
+    switch(chec){
+        case '0':
             checked = ma0;
+
             break;
-        case 1:
+        case '1':
             checked = ma1;
+
             break;
-        case 2:
+        case '2':
             checked = ma2;
+
             break;
-        case 3:
+        case '3':
             checked = ma3;
+
             break;
+
     }
+     return checked;
 }
 
 
-var ma0 = "http://www.vikilife.com/wp-content/uploads/2013/03/03194-15.jpg";
-var ma1 = "http://d.facdn.net/art/huiro/1326007702.huiro_004.png";
-var ma2 = "http://attachment.van698.com/forum/201504/04/214651vc11z80jzjcx8xgr.jpg";
-var ma3 = "http://img.sj33.cn/uploads/allimg/201207/20120724102115753.jpg";
+
