@@ -44,7 +44,7 @@ $(document).ready(function(){
      var ma0 = "http://www.vikilife.com/wp-content/uploads/2013/03/03194-15.jpg";
      var ma1 = "http://d.facdn.net/art/huiro/1326007702.huiro_004.png";
      var ma2 = "http://attachment.van698.com/forum/201504/04/214651vc11z80jzjcx8xgr.jpg";
-     var ma3 = "http://img.sj33.cn/uploads/allimg/201207/20120724102115753.jpg";
+     var ma3 = "http://pomose.weebly.com/uploads/1/6/0/4/16043340/820353525.png?194";
     switch(chec){
         case '0':
             checked = ma0;
