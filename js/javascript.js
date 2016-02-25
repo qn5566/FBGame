@@ -7,6 +7,12 @@ $(document).ready(function(){
 
     $(".css_btn_class").on("click", function (e) {
         //alert("果然是個聰明人!");
+
+        if(!$('input.test').hasClass('checked')){
+            alert('請先選擇喜歡的神奇寶貝優~');
+
+        }else{
+
         var checked_ad =  TestGame($("input.test.checked").val());
         //TestGame($("input.test.checked").val());
         //console.log( TestGame($("input.test.checked").val()));
@@ -23,16 +29,17 @@ $(document).ready(function(){
             },
 
             function (response) {
-                console.log(response);
-                console.log(response.post_id);
+                //console.log(response);
+                //console.log(response.post_id);
                 //if (response && response.post_id) {
-                //    //alert('順利發佈消息摟~');
+                    alert('順利發佈消息摟~');
                 //} else {
                 //    //alert('沒有發送成功!哭哭');
                 //}
             }
         );
 
+        }
     })
 
 
