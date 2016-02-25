@@ -35,29 +35,42 @@
 </footer>
 </body>
 <script>
-    window.fbAsyncInit = function() {
+    window.fbAsyncInit = function () {
         FB.init({
-            appId      : '1572649893058827',
-            xfbml      : true,
-            version    : 'v2.5'
+            appId: '1572649893058827',
+            xfbml: true,
+            version: 'v2.5'
         });
-//        FB.ui({
-//            method: 'share',
-//            href: 'https://developers.facebook.com/docs/'
-//        }, function(response){
-//            if (response && response.post_id) {
-//                alert('Post was published.');
-//            } else {
-//                alert('Post was not published.');
-//            }
-//        });
+        FB.ui(
+                {
+                    method: 'share',
+                    name: 'Facebook Dialogs',
+                    link: 'http://tw.yahoo.com',
+                    href: 'https://developers.facebook.com/docs/',
+                    picture: 'http://www.vikilife.com/wp-content/uploads/2013/03/03194-15.jpg',
+                    caption: '大木博士',
+                    description: '心理測驗'
 
+                },
+
+                function (response) {
+
+                    if (response && response.post_id) {
+                        alert('Post was published.');
+                    } else {
+                        alert('Post was not published.');
+                    }
+                }
+        );
     };
 
-    (function(d, s, id){
+    (function (d, s, id) {
         var js, fjs = d.getElementsByTagName(s)[0];
-        if (d.getElementById(id)) {return;}
-        js = d.createElement(s); js.id = id;
+        if (d.getElementById(id)) {
+            return;
+        }
+        js = d.createElement(s);
+        js.id = id;
         js.src = "//connect.facebook.net/en_US/sdk.js";
         fjs.parentNode.insertBefore(js, fjs);
     }(document, 'script', 'facebook-jssdk'));
