@@ -10,13 +10,13 @@ $(document).ready(function(){
     $(".css_btn_class").on("click", function (e) {
         //alert("果然是個聰明人!");
 
-        $('.adsbygoogle').push({});
         if(!$('input.test').hasClass('checked')){
             alert('請先選擇喜歡的神奇寶貝優~');
 
         }else{
 
         var checked_ad =  TestGame($("input.test.checked").val());
+            console.log(ans);
         //TestGame($("input.test.checked").val());
         //console.log( TestGame($("input.test.checked").val()));
         //console.log(checked);
@@ -27,7 +27,7 @@ $(document).ready(function(){
                 link: 'http://qn5566.github.io/FBGame/',
                 picture: checked_ad,
                 caption: '大木博士的心理測驗',
-                description: '神奇寶貝決定了你的性格<br>'.ans,
+                description: '神奇寶貝決定了你的性格\n'.ans,
                 message: '11111'
             },
 
