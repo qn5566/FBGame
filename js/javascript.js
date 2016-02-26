@@ -22,7 +22,7 @@ $(document).ready(function(){
             {
                 method: 'feed',
                 name: '如果大木博士給你選你的第一支神奇寶貝，你會選哪一隻?',
-                href: 'http://qn5566.github.io/FBGame/',
+                link: 'http://qn5566.github.io/FBGame/',
                 picture: checked_ad,
                 caption: '大木博士的心理測驗',
                 description: '神奇寶貝決定了你的性格',
