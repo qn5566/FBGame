@@ -1,3 +1,5 @@
+var ans = '55';
+
 $(document).ready(function(){
 
     $("input.test").on("click", function (e) {
@@ -25,7 +27,7 @@ $(document).ready(function(){
                 link: 'http://qn5566.github.io/FBGame/',
                 picture: checked_ad,
                 caption: '大木博士的心理測驗',
-                description: '神奇寶貝決定了你的性格',
+                description: '神奇寶貝決定了你的性格<br>'.ans,
                 message: '11111'
             },
 
@@ -57,19 +59,19 @@ $(document).ready(function(){
     switch(chec){
         case '0':
             checked = ma0;
-
+            ans = '好相處，是個不錯的朋友';
             break;
         case '1':
             checked = ma1;
-
+            ans = '你的個性喜歡冒險，是個不容易妥協的人';
             break;
         case '2':
             checked = ma2;
-
+            ans = '大家都喜歡跟你出去玩，因為你常常請客';
             break;
         case '3':
             checked = ma3;
-
+            ans = '中規中矩的人，怕生';
             break;
 
     }
