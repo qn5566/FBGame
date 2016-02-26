@@ -8,6 +8,7 @@ $(document).ready(function(){
     $(".css_btn_class").on("click", function (e) {
         //alert("果然是個聰明人!");
 
+        $('.adsbygoogle').push({});
         if(!$('input.test').hasClass('checked')){
             alert('請先選擇喜歡的神奇寶貝優~');
 
@@ -19,8 +20,8 @@ $(document).ready(function(){
         //console.log(checked);
         FB.ui(
             {
-                method: 'share',
-                name: 'Facebook Dialogs',
+                method: 'feed',
+                name: '如果大木博士給你選你的第一支神奇寶貝，你會選哪一隻?',
                 href: 'http://qn5566.github.io/FBGame/',
                 picture: checked_ad,
                 caption: '大木博士的心理測驗',
