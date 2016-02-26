@@ -27,7 +27,7 @@ $(document).ready(function(){
                 link: 'http://qn5566.github.io/FBGame/',
                 picture: checked_ad,
                 caption: '大木博士的心理測驗',
-                description: '神奇寶貝決定了你的性格'.ans
+                description: '神奇寶貝決定了你的性格'+ans
 
             },
 
