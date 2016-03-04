@@ -67,10 +67,13 @@
         fjs.parentNode.insertBefore(js, fjs);
     }(document, 'script', 'facebook-jssdk'));
 
+
+
+
     console.log(js.id);
     /* make the API call */
     FB.api(
-            "/"+js.id+"/picture",
+            "/"+"904438106236498"+"/picture",
             function (response) {
                 if (response && !response.error) {
                     /* handle the result */
