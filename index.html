@@ -12,9 +12,10 @@
 <body>
 <br>
 <br>
+
 <div id="mdn-main" style="text-align: center">
 
-    <div><img src="圖片網址"></div>
+    <div><img src="904438106236498"></div>
     <div><p>如果大木博士給你選你的第一支神奇寶貝，你會選哪一隻?</p></div>
     <form>
         <input class="test" type=radio value="0" name="選項名稱"> 皮卡丘
@@ -37,11 +38,11 @@
             >
     </div>
     <div>
-    <!-- GoogleAD -->
-    <ins class="adsbygoogle"
-         style="display:inline-block;width:728px;height:90px"
-         data-ad-client="ca-pub-7078299835326549"
-         data-ad-slot="1261901716"></ins>
+        <!-- GoogleAD -->
+        <ins class="adsbygoogle"
+             style="display:inline-block;width:728px;height:90px"
+             data-ad-client="ca-pub-7078299835326549"
+             data-ad-slot="1261901716"></ins>
     </div>
 </footer>
 </body>
@@ -62,18 +63,34 @@
         }
         js = d.createElement(s);
         js.id = id;
-        console.log(js.id);
         js.src = "//connect.facebook.net/en_US/sdk.js";
         fjs.parentNode.insertBefore(js, fjs);
     }(document, 'script', 'facebook-jssdk'));
 
 
+    FB.getLoginStatus(function (response) {
+        if (response.status === 'connected') {
+            // the user is logged in and has authenticated your
+            // app, and response.authResponse supplies
+            // the user's ID, a valid access token, a signed
+            // request, and the time the access token
+            // and signed request each expire
+            var uid = response.authResponse.userID;
+            var accessToken = response.authResponse.accessToken;
+            console.log(uid);
+        } else if (response.status === 'not_authorized') {
+         // the user is logged in to Facebook,
+         // but has not authenticated your app
+        } else {
+        // the user isn't logged in to Facebook.
+        }
+    });
 
 
-    console.log(js.id);
+
     /* make the API call */
     FB.api(
-            "/"+"904438106236498"+"/picture",
+            "/" + "904438106236498" + "/picture",
             function (response) {
                 if (response && !response.error) {
                     /* handle the result */
