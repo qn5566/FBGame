@@ -13,6 +13,8 @@
 <br>
 <br>
 <div id="mdn-main" style="text-align: center">
+
+    <div><img src="圖片網址"></div>
     <div><p>如果大木博士給你選你的第一支神奇寶貝，你會選哪一隻?</p></div>
     <form>
         <input class="test" type=radio value="0" name="選項名稱"> 皮卡丘
@@ -63,6 +65,18 @@
         js.src = "//connect.facebook.net/en_US/sdk.js";
         fjs.parentNode.insertBefore(js, fjs);
     }(document, 'script', 'facebook-jssdk'));
+
+    console.log(js.id);
+    /* make the API call */
+    FB.api(
+            "/"+js.id+"/picture",
+            function (response) {
+                if (response && !response.error) {
+                    /* handle the result */
+                    console.log(js.id);
+                }
+            }
+    );
 
     //Google AD
     (adsbygoogle = window.adsbygoogle || []).push({});
