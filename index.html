@@ -68,6 +68,32 @@
             } else if (response.status === 'not_authorized') {
                 // the user is logged in to Facebook,
                 // but has not authenticated your app
+                FB.login(function (response) {
+
+                    if (response.authResponse) {
+
+                        FB.api('/me', function (response) {
+
+                            //所以 login 後可以直接取得下面的值，並傳入 CheckPlayer 這 function
+
+                            //然後在 CheckPlayer 中透過AJAX在資料庫中檢查並寫入資料庫
+
+                            CheckPlayer(response.id, response.name, response.email, response.birthday);
+
+                        });
+
+                    } else {
+
+                        alert('登入失敗!');
+
+                    }
+
+                }, {
+
+                    scope: 'email,user_birthday'
+
+                });
+
             } else {
                 // the user isn't logged in to Facebook.
             }
@@ -88,6 +114,31 @@
 
     //Google AD
     (adsbygoogle = window.adsbygoogle || []).push({});
+
+
+
+
+    function CheckPlayer(uid, cname, email, birthday) {
+
+        $.ajax({
+
+            url: 'AJAX/CheckGamePlayer.aspx',
+
+            type: 'POST',
+
+            data: { uid: uid, cname: cname, email: email, birthday: birthday },
+
+            dateType: 'html',
+
+            success: function () {
+
+                //檢查資料庫並新增完之後就看要幹嘛
+
+            }
+
+        })
+
+    }
 
 
 </script>
